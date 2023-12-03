@@ -15,8 +15,8 @@ install_program_ubuntu() {
     program=$1
     if ! command -v $program &> /dev/null; then
         echo "Instalando $program..."
-        sudo apt-get update
-        sudo apt-get install -y $program
+        apt update
+        apt-get install -y $program
     fi
 }
 
@@ -24,6 +24,8 @@ install_program_ubuntu() {
 install_program_ubuntu "curl"
 install_program_ubuntu "jq"
 install_program_ubuntu "inetutils-traceroute"
+install_program_ubuntu "net-tools"
+install_program_ubuntu "iproute2"
 
 # 3.1 Imprimir no console utilizando variável de ambiente o nome do usuário atual da máquina :
 echo "··············································"
