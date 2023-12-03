@@ -15,9 +15,11 @@ RUN echo "[ ***** ***** ***** ] ➔ Installing ***** ***** ***** "
 RUN apt-get update && apt-get install -y \
     curl \
     jq \
-    traceroute \
     nano \
-    git
+    git \
+    traceroute \
+    iproute2 \
+    net-tools
 
 #Executar o script ao iniciar o contêiner :
 CMD ["/usr/local/bin/script.sh"]
